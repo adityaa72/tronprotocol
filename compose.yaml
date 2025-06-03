@@ -2,12 +2,11 @@ services:
   java-tron:
     image: tronprotocol/java-tron
     container_name: java-tron
-    platform: linux/amd64
     command: -c /java-tron/config/main_net_config.conf
     ports:
       - "8090:8090"
       - "18888:18888"
-      - "50051:50051"
+      - "50052:50051"
     volumes:
       - ./output:/java-tron/output-directory
       - ./logs:/java-tron/logs
